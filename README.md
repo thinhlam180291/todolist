@@ -17,4 +17,4 @@ Dependencies between 3 layers:
 Screenshots:
 
 Android
-<img src="https://user-images.githubusercontent.com/71365481/94391269-42e96b00-017f-11eb-9793-a57fcaa24d48.jpg">
+<img src="https://user-images.githubusercontent.com/71365481/94391269-42e96b00-017f-11eb-9793-a57fcaa24d48.jpg" height="600" width="300">
