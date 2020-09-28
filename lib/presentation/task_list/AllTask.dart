@@ -25,6 +25,12 @@ class _AllTask extends State<AllTask> {
 
   }
   @override
+  void dispose() {
+    taskViewModel.closeObservable();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return StreamBuilder<List<Task>>(
         stream: taskViewModel.taskAllList,

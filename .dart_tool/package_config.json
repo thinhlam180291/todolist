@@ -284,6 +284,12 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "mockito",
+      "rootUri": "file:///Users/lamthinh/Documents/flutter_projects/flutter/.pub-cache/hosted/pub.dartlang.org/mockito-4.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "moor",
       "rootUri": "file:///Users/lamthinh/Documents/flutter_projects/flutter/.pub-cache/hosted/pub.dartlang.org/moor-3.2.0",
       "packageUri": "lib/",
@@ -494,7 +500,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2020-09-27T17:13:17.820853Z",
+  "generated": "2020-09-28T06:16:19.198671Z",
   "generator": "pub",
   "generatorVersion": "2.9.2"
 }

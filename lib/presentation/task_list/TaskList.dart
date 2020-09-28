@@ -2,6 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:todolist/data/db/TaskDao.dart';
+import 'package:todolist/data/repository/TaskLocalDataSourceImpl.dart';
+import 'package:todolist/data/repository/TaskRepositoryImpl.dart';
+import 'package:todolist/domain/usecase/CreateTask.dart';
+import 'package:todolist/domain/usecase/GetTask.dart';
+import 'package:todolist/domain/usecase/UpdateTask.dart';
 import 'package:todolist/generated/l10n.dart';
 import 'package:todolist/presentation/task_list/AddTaskDialog.dart';
 import 'package:todolist/presentation/task_list/AllTask.dart';
@@ -24,9 +29,11 @@ class _TaskList extends State<TaskList>{
       selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
-    final taskViewModel = new TaskViewModel();
+    final taskRepository = new TaskRepositoryImpl(new TaskLocalDataSourceImpl());
+    final taskViewModel = new TaskViewModel(new GetTask(taskRepository), new UpdateTask(taskRepository), new CreateTask(taskRepository));
     pages = <Widget>[
       new AllTask(taskViewModel),
       new CompletedTask(taskViewModel),

@@ -12,16 +12,10 @@ import 'package:todolist/domain/usecase/UpdateTask.dart';
 import 'package:todolist/domain/utils/Constant.dart';
 
 class TaskViewModel{
-  GetTask _getTask;
-  CreateTask _createTask;
-  UpdateTask _updateTask;
-  TaskViewModel(){
-    final taskLocalDataSource = new TaskLocalDataSourceImpl();
-    final taskRepository = new TaskRepositoryImpl(taskLocalDataSource);
-    _getTask = new GetTask(taskRepository);
-    _createTask = new CreateTask(taskRepository);
-    _updateTask = new UpdateTask(taskRepository);
-  }
+  final GetTask _getTask;
+  final CreateTask _createTask;
+  final UpdateTask _updateTask;
+  TaskViewModel(this._getTask, this._updateTask, this._createTask);
 
   var listTaskAllSubject = PublishSubject<List<Task>>();
   var listTaskCompletedSubject = PublishSubject<List<Task>>();
@@ -66,7 +60,6 @@ class TaskViewModel{
       getAllTask();
       getInCompletedTask();
     } catch (e) {
-      print(e.toString());
       createTaskSubject.sink.addError(e);
     }
   }
@@ -79,7 +72,6 @@ class TaskViewModel{
       getCompletedTask();
       getInCompletedTask();
     } catch (e) {
-      print(e.toString());
       createTaskSubject.sink.addError(e);
     }
   }

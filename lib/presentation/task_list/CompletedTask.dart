@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:todolist/domain/model/Task.dart';
-import 'package:todolist/presentation/task_list/TaskBaseView.dart';
 import 'package:todolist/presentation/task_list/TaskViewModel.dart';
 import 'package:todolist/presentation/utils/TaskListUltils.dart';
 
@@ -26,6 +25,11 @@ class _CompletedTask extends State<CompletedTask> {
     super.initState();
     taskViewModel.getCompletedTask();
 
+  }
+  @override
+  void dispose() {
+    taskViewModel.closeObservable();
+    super.dispose();
   }
   @override
   Widget build(BuildContext context) {
