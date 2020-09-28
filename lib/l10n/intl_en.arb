@@ -1,0 +1,11 @@
+{
+  "app_name": "Todo List",
+  "all": "All",
+  "completed": "Completed",
+  "in_completed": "In Completed",
+  "desciption": "Description (*)",
+  "format_time": "dd/MM/yyyy hh:ss (*)",
+  "add_task": "ADD",
+  "error_add": "Please fill all the fields"
+
+}
