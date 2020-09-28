@@ -13,3 +13,13 @@ There are 3 layers in this project:
 Dependencies between 3 layers:
 
 <img src="https://user-images.githubusercontent.com/71365481/93423718-cfbf3980-f8e0-11ea-9ea3-81c1ac845ebb.png">
+
+Screenshots 
+
+Android:
+
+<img src="https://user-images.githubusercontent.com/71365481/94391269-42e96b00-017f-11eb-9793-a57fcaa24d48.jpg" height="600" width="300">
+
+IOS:
+
+<img src="https://user-images.githubusercontent.com/71365481/94391722-75e02e80-0180-11eb-8f1d-e85cfbbce228.png" height="600" width="300">
